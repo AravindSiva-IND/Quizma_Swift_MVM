@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F22C983B217CE53200E5C05D /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F22C9838217CE53100E5C05D /* ProgressHUD.m */; };
+		F22C983C217CE53200E5C05D /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F22C9839217CE53100E5C05D /* ProgressHUD.bundle */; };
 		F2C12F1C217C50F00058A274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C12F1B217C50F00058A274 /* AppDelegate.swift */; };
 		F2C12F1E217C50F00058A274 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C12F1D217C50F00058A274 /* ViewController.swift */; };
 		F2C12F21217C50F00058A274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C12F1F217C50F00058A274 /* Main.storyboard */; };
@@ -18,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F22C9837217CE53000E5C05D /* Quizma-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Quizma-Bridging-Header.h"; sourceTree = "<group>"; };
+		F22C9838217CE53100E5C05D /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		F22C9839217CE53100E5C05D /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		F22C983A217CE53200E5C05D /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		F2C12F18217C50F00058A274 /* Quizma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C12F1B217C50F00058A274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2C12F1D217C50F00058A274 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,8 +105,12 @@
 		F2C12F30217C523F0058A274 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F22C9839217CE53100E5C05D /* ProgressHUD.bundle */,
+				F22C983A217CE53200E5C05D /* ProgressHUD.h */,
+				F22C9838217CE53100E5C05D /* ProgressHUD.m */,
 				F2C12F24217C50F00058A274 /* LaunchScreen.storyboard */,
 				F2C12F27217C50F00058A274 /* Info.plist */,
+				F22C9837217CE53000E5C05D /* Quizma-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 				TargetAttributes = {
 					F2C12F17217C50EF0058A274 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -167,6 +178,7 @@
 				F2C12F26217C50F00058A274 /* LaunchScreen.storyboard in Resources */,
 				F2C12F32217C58F70058A274 /* Default-568h@2x.png in Resources */,
 				F2C12F23217C50F00058A274 /* Assets.xcassets in Resources */,
+				F22C983C217CE53200E5C05D /* ProgressHUD.bundle in Resources */,
 				F2C12F21217C50F00058A274 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +192,7 @@
 			files = (
 				F2C12F34217C60EA0058A274 /* Question.swift in Sources */,
 				F2C12F36217C6D3E0058A274 /* QuestionList.swift in Sources */,
+				F22C983B217CE53200E5C05D /* ProgressHUD.m in Sources */,
 				F2C12F1E217C50F00058A274 /* ViewController.swift in Sources */,
 				F2C12F1C217C50F00058A274 /* AppDelegate.swift in Sources */,
 			);
@@ -318,11 +331,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Quizma/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AravindSiva.Quizma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Quizma/Supporting Files/Quizma-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -332,11 +348,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Quizma/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AravindSiva.Quizma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Quizma/Supporting Files/Quizma-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
